@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CineVerse — Complete Cinema Database</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="bg-layer" aria-hidden="true">
+  <div id="bg-img"></div>
+  <div id="bg-overlay"></div>
+</div>
+
+<header id="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/">CINE<span>VERSE</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-btn active" data-section="discover">Discover</button>
+      <button class="nav-btn" data-section="movies">Movies</button>
+      <button class="nav-btn" data-section="series">Series</button>
+      <button class="nav-btn" data-section="watchlist">Watchlist <span id="wl-count">0</span></button>
+    </nav>
+    <div class="header-right">
+      <div class="search-wrap">
+        <input type="text" id="search-input" placeholder="Search titles, actors, directors..." autocomplete="off" aria-label="Search">
+        <button id="search-btn" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+        <div id="search-results" role="listbox"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="hero" class="hero-discover">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Featured Tonight</p>
+    <h1 id="hero-title">Loading…</h1>
+    <div id="hero-meta"></div>
+    <p id="hero-plot"></p>
+    <div class="hero-actions">
+      <button id="hero-detail-btn" class="btn-primary">More Info</button>
+      <button id="hero-wl-btn" class="btn-ghost">+ Watchlist</button>
+    </div>
+  </div>
+</section>
+
+<div id="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-group"><label>Genre</label><select id="filter-genre" title="Filter by genre"><option value="">All</option><option>Action</option><option>Comedy</option><option>Drama</option><option>Sci-Fi</option><option>Thriller</option><option>Crime</option><option>Horror</option><option>Animation</option><option>Romance</option></select></div>
+    <div class="filter-group"><label>Year</label><select id="filter-year" title="Filter by year"><option value="">All</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2010–2019</option><option>2000–2009</option><option>Before 2000</option></select></div>
+    <div class="filter-group"><label>Rating</label><select id="filter-rating" title="Filter by rating"><option value="">Any</option><option value="9">9+ ★</option><option value="8">8+ ★</option><option value="7">7+ ★</option></select></div>
+    <div class="filter-group"><label>Language</label><select id="filter-lang" title="Filter by language"><option value="">All</option><option>English</option><option>Hindi</option><option>Korean</option><option>Spanish</option><option>Japanese</option><option>French</option><option>German</option></select></div>
+    <div class="filter-group ott-chips">
+      <label>OTT</label>
+      <div class="ott-chip-list" id="ott-chip-list">
+        <span data-ott="Netflix">Netflix</span><span data-ott="Prime Video">Prime Video</span><span data-ott="Hotstar">Hotstar</span><span data-ott="JioCinema">JioCinema</span><span data-ott="Apple TV+">Apple TV+</span>
+      </div>
+    </div>
+    <button id="filter-reset" class="btn-reset">Reset</button>
+  </div>
+</div>
+
+<main id="main-content">
+  <div id="dynamic-content"></div>
+  <section class="rail-section hidden" id="section-search-results">
+    <div class="rail-header"><h2 class="rail-title"><span class="accent-dot"></span>Search Results</h2></div>
+    <div class="grid-results" id="grid-search"></div>
+  </section>
+</main>
+
+<div id="modal-overlay" class="hidden" role="dialog" aria-modal="true">
+  <div id="modal-panel">
+    <button id="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-backdrop"></div>
+    <div id="modal-body">
+      <div id="modal-poster-wrap"><img id="modal-poster" alt=""><div id="modal-score-badge"></div></div>
+      <div id="modal-info">
+        <div id="modal-top-meta"></div><h2 id="modal-title"></h2>
+        <div id="modal-tags"></div><p id="modal-plot"></p>
+        <div id="modal-details-grid"></div>
+        <div id="modal-awards"></div>
+        <div id="modal-actions">
+          <button id="modal-wl-btn" class="btn-primary">+ Watchlist</button>
+          <div id="modal-rating-wrap"><span>Rate: </span><div id="modal-stars"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
+<footer><p>© 2026 CineVerse · Complete local catalog · 300+ titles with posters</p></footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
