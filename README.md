@@ -1,4 +1,4 @@
-🎬 CineVerse — A Fully Offline Movie & TV Discovery Engine
+# 🎬 CineVerse — A Fully Offline Movie & TV Discovery Engine
 
 CineVerse is a high-performance, fully static web application designed to deliver a rich, cinematic browsing experience—without relying on live APIs.
 
@@ -6,7 +6,7 @@ It lets users explore a curated global catalog of movies and TV series with deep
 
 No backend. No API latency. No runtime dependencies.
 
-🚀 Why This Exists
+# 🚀 Why This Exists
 
 Most movie discovery platforms are:
 
@@ -18,24 +18,24 @@ CineVerse eliminates all of that.
 
 Everything is precomputed, locally stored, and instantly accessible—turning the browser into a self-contained entertainment engine.
 
-✨ Core Capabilities
+#✨ Core Capabilities
 
-🎥 Deep Catalog
+#🎥 Deep Catalog
 300+ movies and TV series (easily scalable)
 Rich metadata: cast, director, runtime, release date, OTT availability, classification
 
-📺 TV Series Intelligence
+#📺 TV Series Intelligence
 Season-level navigation
 Per-season posters, summaries, and episode counts
 
-🧠 Smart Discovery
+#🧠 Smart Discovery
 Dynamic content rails:
 Because You Watched
 Trending on OTT
 Top 10 This Week
 Classic Gems
 
-⭐ Personalization
+#⭐ Personalization
 Watchlist (stored locally)
 Persistent 5-star rating system
 Behavior-driven recommendations
