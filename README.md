@@ -6,6 +6,8 @@ It lets users explore a curated global catalog of movies and TV series with deep
 
 No backend. No API latency. No runtime dependencies.
 
+## 🔗 Live Demo: https://vanshmehta6.github.io/CineVerse/ 
+
 # 🚀 Why This Exists
 
 Most movie discovery platforms are:
