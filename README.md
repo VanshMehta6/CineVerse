@@ -28,7 +28,7 @@ Everything is precomputed, locally stored, and instantly accessible—turning th
  - Per-season posters, summaries, and episode counts
 
 ## 🧠 Smart Discovery
- - Dynamic content rails:
+ Dynamic content rails:
  - Because You Watched
  - Trending on OTT
  - Top 10 This Week
@@ -53,14 +53,14 @@ Everything is precomputed, locally stored, and instantly accessible—turning th
 
 # ⚡ Performance Advantage
  - Zero API calls at runtime
-Instant load after initial render
+ - Instant load after initial render
  - Fully functional offline
-No backend bottlenecks
+ - No backend bottlenecks
 
 # 🖥️ Run Locally (Zero Setup)
-Download or clone the repository
-Open index.html in any modern browser
-Done
+ 1. Download or clone the repository
+ 2. Open index.html in any modern browser
+ 3. Done
 
 # 📁 Architecture Overview
 cineverse/
@@ -77,18 +77,17 @@ The dataset was generated using a Node.js script that pulls from TMDB.
 
 You don’t need it to run the app—but if you want to scale:
 
-Add more titles
-Refresh outdated metadata
-Expand into new regions
+ - Add more titles
+ - Refresh outdated metadata
+ - Expand into new regions
 
 You can regenerate everything via the script (requires TMDB API key).
 
 # 🧰 Tech Stack
-HTML5 + CSS3 (Grid, Flexbox, variables)
-Vanilla JavaScript (no frameworks, no overhead)
-LocalStorage (state persistence)
-TMDB (data source, build-time only)
+ - HTML5 + CSS3 (Grid, Flexbox, variables)
+ - Vanilla JavaScript (no frameworks, no overhead)
+ - LocalStorage (state persistence)
+ - TMDB (data source, build-time only)
 
-## 📜 License
-For educational and personal use only.
+# 📜 License
 All content belongs to respective copyright holders and TMDB.
